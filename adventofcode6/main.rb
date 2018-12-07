@@ -5,11 +5,9 @@ input = File.read("input").split("\n").map{|x|
 }
 
 coords = Array.new(input.length, 0)
-amax = input.flatten.max*2
+amax = input.flatten.max
 area  = Array.new(amax) {Array.new(amax, "-2 100000000")}
 area2  = Array.new(amax) {Array.new(amax, 0)}
-input.map!{|idxy| [idxy[0], idxy[1]+amax/4, idxy[2]+amax/4]}
-#area  = Array.new(10) {Array.new(10, "-2 100000000")}
 def manhat(x,y, x1,y1)
     return (x-x1).abs + (y-y1).abs
 end
@@ -47,4 +45,3 @@ area2.each_index {|xc|
 }
 
 puts region
-__END__
