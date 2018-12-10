@@ -7,10 +7,6 @@ center[0] = input.sum(0){|x,y,_,_| x}/input.length
 center[1] = input.sum(0){|x,y,_,_| y}/input.length
 
 part1 = input.dup
-notdone = true
-bbox = [-500,500,-500,500]
-squeezing = false
-done = false
 prevrange = 1.0/0.0
 secs = 0
 while true
